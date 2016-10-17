@@ -1,0 +1,23 @@
+resources:
+
+################################
+
+# add integration for AWS
+  - name: integration-aws
+    type: integration
+    integration: ttrahan-aws
+
+# add gitRepo for Terraform scripts
+  - name: repo-tfScripts
+    type: gitRepo
+    integration: ttrahan-gh
+    pointer:
+      sourceName: ttrahan/tf-pipeline
+      branch: master
+
+  # env vars for Terraform scripts
+  - name: params-tfScripts
+    type: params
+    version:
+      params:
+        REGION: "us-east-1"

@@ -1,0 +1,5 @@
+triggers:
+  - name: trigger-tf-deploy
+    type: trigger
+    version:
+      message: 'trigger for Terraform scripts'
