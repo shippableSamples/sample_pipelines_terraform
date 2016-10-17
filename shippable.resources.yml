@@ -5,14 +5,14 @@ resources:
 # add integration for AWS
   - name: integration-aws
     type: integration
-    integration: ttrahan-aws
+    integration: demo-manishas-ecs
 
 # add gitRepo for Terraform scripts
   - name: repo-tfScripts
     type: gitRepo
-    integration: ttrahan-gh
+    integration: github-manishas
     pointer:
-      sourceName: ttrahan/tf-pipeline
+      sourceName: manishas/sample_pipelines_terraform
       branch: master
 
   # env vars for Terraform scripts
