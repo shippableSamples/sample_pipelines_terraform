@@ -9,4 +9,4 @@ jobs:
       - IN: params-tfScripts
       - IN: trigger-tf-deploy
       - TASK:
-        - script: . /build/IN/repo-tfScripts/gitRepo/runTerraform.sh
+        - script: . /build/IN/repo-tfScripts/gitRepo/provInfra.sh
