@@ -8,7 +8,7 @@ resource "aws_instance" "sampleInstances" {
 
   # ami = "${var.ecsAmi}"
   ami = "ami-0d729a60"
-  availability_zone = "us-east-1b"
+  availability_zone = "us-east-1c"
   instance_type = "t2.micro"
   #subnet_id = "subnet-84ea36cd"
   subnet_id = "subnet-0def4d7a"
