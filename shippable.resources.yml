@@ -5,7 +5,7 @@ resources:
 # add integration for AWS
   - name: integration-aws
     type: integration
-    integration: demo-manishas-ecs
+    integration: manishas-aws
 
 # add gitRepo for Terraform scripts
   - name: repo-tfScripts
