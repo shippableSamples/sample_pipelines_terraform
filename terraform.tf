@@ -8,9 +8,9 @@ resource "aws_instance" "sampleInstances" {
 
   # ami = "${var.ecsAmi}"
   ami = "ami-0d729a60"
-  availability_zone = "us-east-1b"
+  availability_zone = "us-east-1b"   #REPLACE THIS WITH YOUR AVAILABILITY ZONE
   instance_type = "t2.micro"
-  subnet_id = "subnet-5bfa2e76"
+  subnet_id = "subnet-5bfa2e76"  #REPLACE THIS WITH YOUR SUBNET ID
   associate_public_ip_address = true
   source_dest_check = false
 
