@@ -81,5 +81,13 @@ createOutState() {
 }
 createOutState
 
+# Save state resource out
+echo -e "\n*** saving state resource ***"
+createOutStateRes() {
+  STATERES_LOCATION=/build/OUT/my-state/state/
+  cp terraform.tfstate $STATERES_LOCATION
+}
+createOutStateRes
+
 # Processing complete
 echo -e "\n*** processing complete - ${BASH_SOURCE[0]} ***"
