@@ -5,14 +5,14 @@ resources:
 # add integration for AWS
   - name: integration-aws
     type: integration
-    integration: manishas-aws  #REPLACE THIS WITH YOUR AWS INTEGRATION
+    integration: jatin-aws  #REPLACE THIS WITH YOUR AWS INTEGRATION
 
 # add gitRepo for Terraform scripts
   - name: repo-tfScripts
     type: gitRepo
-    integration: github-manishas   #REPLACE THIS WITH YOUR GITHUB INTEGRATION
+    integration: jatin-github   #REPLACE THIS WITH YOUR GITHUB INTEGRATION
     pointer:
-      sourceName: manishas/sample_pipelines_terraform  #REPLACE nanishas WITH YOUR org name
+      sourceName: jatindogra/sample_pipelines_terraform  #REPLACE nanishas WITH YOUR org name
       branch: master
 
   # env vars for Terraform scripts
