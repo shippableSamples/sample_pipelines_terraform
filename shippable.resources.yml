@@ -21,3 +21,6 @@ resources:
     version:
       params:
         REGION: "us-east-1"    #REPLACE THIS WITH REGION (optional)
+
+  - name: my-state
+    type: state
