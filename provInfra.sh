@@ -16,17 +16,17 @@ install_terraform() {
 install_terraform
 
 # Extract previous state
-echo -e "\n*** extracting previous state for this job ***"
-get_previous_statefile() {
-  local previous_statefile_location="/build/previousState/terraform.tfstate"
-  if [ -f "$previous_statefile_location" ]; then
-    cp $previous_statefile_location /build/IN/repo-tfScripts/gitRepo
-    echo 'restored previous statefile'
-  else
-    echo "no previous statefile exists"
-  fi
-}
-get_previous_statefile
+# echo -e "\n*** extracting previous state for this job ***"
+# get_previous_statefile() {
+#   local previous_statefile_location="/build/previousState/terraform.tfstate"
+#   if [ -f "$previous_statefile_location" ]; then
+#     cp $previous_statefile_location /build/IN/repo-tfScripts/gitRepo
+#     echo 'restored previous statefile'
+#   else
+#     echo "no previous statefile exists"
+#   fi
+# }
+# get_previous_statefile
 
 # Extract integration data
 echo -e "\n*** extracting AWS integration information ***"
@@ -74,12 +74,12 @@ provision_infra() {
 provision_infra
 
 # Save state
-echo -e "\n*** saving state ***"
-createOutState() {
-  STATEFILE_LOCATION=/build/state/
-  cp terraform.tfstate $STATEFILE_LOCATION
-}
-createOutState
+# echo -e "\n*** saving state ***"
+# createOutState() {
+#   STATEFILE_LOCATION=/build/state/
+#   cp terraform.tfstate $STATEFILE_LOCATION
+# }
+# createOutState
 
 # Save state resource out
 echo -e "\n*** saving state resource ***"
