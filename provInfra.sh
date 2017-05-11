@@ -15,7 +15,7 @@ install_terraform() {
 }
 install_terraform
 
-Extract previous state
+#Extract previous state
 echo -e "\n*** extracting previous state for this job ***"
 get_previous_statefile() {
   local previous_statefile_location="/build/IN/my-state/state"
