@@ -73,21 +73,13 @@ provision_infra() {
 }
 provision_infra
 
-# Save state
-# echo -e "\n*** saving state ***"
-# createOutState() {
-#   STATEFILE_LOCATION=/build/state/
-#   cp terraform.tfstate $STATEFILE_LOCATION
-# }
-# createOutState
-
 # Save state resource out
-# echo -e "\n*** saving state resource ***"
-# createOutStateRes() {
-#   STATERES_LOCATION=/build/OUT/my-state/state/
-#   cp terraform.tfstate $STATERES_LOCATION
-# }
-# createOutStateRes
+echo -e "\n*** saving state resource ***"
+createOutStateRes() {
+  STATERES_LOCATION=/build/OUT/my-state/state/
+  cp terraform.tfstate $STATERES_LOCATION
+}
+createOutStateRes
 
 # Processing complete
 echo -e "\n*** processing complete - ${BASH_SOURCE[0]} ***"
