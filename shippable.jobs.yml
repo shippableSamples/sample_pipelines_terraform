@@ -8,6 +8,6 @@ jobs:
       - IN: repo-tfScripts
       - IN: params-tfScripts
       - IN: trigger-tf-deploy
-      - IN: my-state
       - TASK:
         - script: . /build/IN/repo-tfScripts/gitRepo/provInfra.sh
+      - OUT: my-state
