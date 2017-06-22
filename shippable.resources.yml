@@ -21,6 +21,20 @@ resources:
     version:
       params:
         REGION: "us-east-1"    #REPLACE THIS WITH REGION (optional)
+        
+  - name: repo-tfScripts-1
+    type: gitRepo
+    integration: jatin-github   #REPLACE THIS WITH YOUR GITHUB INTEGRATION
+    pointer:
+      sourceName: jatindogra/sample_pipelines_terraform  #REPLACE nanishas WITH YOUR org name
+      branch: master
+
+  # env vars for Terraform scripts
+  - name: params-tfScripts-1
+    type: params
+    version:
+      params:
+        REGION: "us-east-1"    #REPLACE THIS WITH REGION (optional)
 
   - name: my-state
     type: state
