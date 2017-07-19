@@ -15,18 +15,18 @@ install_terraform() {
 }
 install_terraform
 
-# Extract previous state
-echo -e "\n*** extracting previous state for this job ***"
-get_previous_statefile() {
-  local previous_statefile_location="/build/previousState/terraform.tfstate"
-  if [ -f "$previous_statefile_location" ]; then
-    cp $previous_statefile_location /build/IN/repo-tfScripts/gitRepo
-    echo 'restored previous statefile'
+#Extract central state
+echo -e "\n*** extracting central state for this job ***"
+get_central_statefile() {
+  local central_statefile_location="/build/IN/my-state/state"
+  if [ -f "$central_statefile_location" ]; then
+    cp $central_statefile_location /build/IN/repo-tfScripts/gitRepo
+    echo 'restored central statefile'
   else
-    echo "no previous statefile exists"
+    echo "no previous central exists"
   fi
 }
-get_previous_statefile
+get_central_statefile
 
 # Extract integration data
 echo -e "\n*** extracting AWS integration information ***"
@@ -73,13 +73,13 @@ provision_infra() {
 }
 provision_infra
 
-# Save state
-echo -e "\n*** saving state ***"
-createOutState() {
-  STATEFILE_LOCATION=/build/state/
-  cp terraform.tfstate $STATEFILE_LOCATION
+# Save state resource out
+echo -e "\n*** saving state resource ***"
+createOutStateRes() {
+  STATERES_LOCATION=/build/OUT/my-state/state/
+  cp terraform.tfstate $STATERES_LOCATION
 }
-createOutState
+createOutStateRes
 
 # Processing complete
 echo -e "\n*** processing complete - ${BASH_SOURCE[0]} ***"
